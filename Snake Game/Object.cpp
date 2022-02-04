@@ -10,3 +10,9 @@ Object::Object(ObjectType aType):
 Object::~Object()
 {
 }
+
+ObjectType
+Object::getType()
+{
+	return mType;
+}
