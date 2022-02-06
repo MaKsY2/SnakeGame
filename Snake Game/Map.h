@@ -14,7 +14,10 @@ public:
 	std::pair<int, int> newRandCoords();
 	std::vector<std::vector<int>> getField();
 	void newEmptyMap();
+	void makeTurn();
+
 private:
+
 	std::vector<std::vector<Object*>> mField;
 };
 

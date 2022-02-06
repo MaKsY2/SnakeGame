@@ -69,10 +69,14 @@ Graphics::updateMap(std::vector<std::vector<int>> aMap)
 
 		for (int i = 0; i < aMap.size(); i++)
 		{
-			if (i) square.move(-1 * SQUARE_SIZE * (aMap[0].size() - 1), SQUARE_SIZE);
+			float x = -1 * SQUARE_SIZE * (int(aMap[0].size()) - 1);
+			float y = SQUARE_SIZE;
+			if (i) square.move(x, y);
 			for (int j = 0; j < aMap[0].size(); j++)
 			{
-				square.move(SQUARE_SIZE * bool(j), 0);
+				float x1 = SQUARE_SIZE * bool(j);
+				float y1 = 0;
+				square.move(x1, y1);
 				mWindow.draw(square);
 			}
 		}

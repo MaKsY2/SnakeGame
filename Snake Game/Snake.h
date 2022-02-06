@@ -3,13 +3,24 @@
 
 #include "Object.h"
 
+enum Direction
+{
+	UP,
+	RIGHT,
+	DOWN,
+	LEFT
+};
+
 class Snake:public Object
 {
 public:
 	Snake();
 	~Snake();
 
+	Direction getDirect();
+
 private:
+	Direction mDirect;
 
 };
 

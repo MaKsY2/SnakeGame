@@ -6,6 +6,7 @@
 #include "Food.h"
 #include "Wall.h"
 #include "Void.h"
+#include "Snake.h"
 
 Map::Map(int height, int weight):
 	mField				(height,std::vector<Object*>(weight,NULL))
@@ -25,6 +26,8 @@ Map::Map(int height, int weight):
 		}
 	}
 	setObject(new Food(), newRandCoords());
+	setObject(new Snake(), newRandCoords());
+
 }
 
 Map::~Map()
@@ -64,6 +67,15 @@ Map::getField()
 	}
 	return result;
 }
+
+
+
+void
+Map::makeTurn()
+{
+
+}
+
 
 void
 Map::setObject(Object* obj, std::pair<int, int> newCoord)

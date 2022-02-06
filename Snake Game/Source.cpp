@@ -19,7 +19,7 @@ int main()
 	Graphics graph(settings);
 
 	Map map(FIELD_ROWS, FIELD_COLS);
-	graph.updateMap(map.getField());
+	graph.updateMap(map.getField());  
 	//graph.testField(FIELD_ROWS, FIELD_COLS);
 
 	return 0;
